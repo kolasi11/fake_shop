@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <nav>
+      <aside class="logo">qshop</aside>
+      <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="">signup</a></li>
+        <li><a href="">login</a></li>
+        <li><a href="#cartContainer">cart</a><sup class="cartItemCount">0</sup></li>
+      </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="homeContainer">
+      <video src="assests/homepage3.mp4" autoplay loop muted></video>
+      <article>
+        <h1 data-aos="fade-left">
+          Welcome to <br />
+          <span>Q</span>shop
+        </h1>
+        <button><a href="#productsContainer">Go Shopping</a></button>
+      </article>
+    </section>
+
+    <!-- Products Section -->
+    <section id="productsContainer">
+      <h1>All Products</h1>
+
+      <article id="productsWrapper">
+        <!-- to display all products -->
+      </article>
+    </section>
+
+
+    <!-- Cart Section -->
+     <section id="cartContainer">
+      <h1>My Cart</h1>
+      <article id="cart">
+      </article>
+     </section>
+
+
+
+
+     
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

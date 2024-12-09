@@ -1,0 +1,258 @@
+*,*::after,*::before {
+box-sizing: border-box;
+}
+
+* {
+margin: 0px;
+padding: 0px;
+font-family: sans-serif;
+}
+
+body {
+width: 100vw;
+}
+
+/* Nav Styles */
+
+a {
+color: inherit;
+text-decoration: none;
+}
+nav {
+height: 70px;
+width: 100%;
+background-color: rgba(255, 255, 255, 0.225);
+backdrop-filter: blur(10px);
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 5px 20px;
+position: fixed;
+top: 0;
+z-index: 100;
+}
+nav > ul {
+/* border: 1px solid black; */
+list-style: none;
+display: flex;
+gap: 20px;
+}
+nav > ul > li {
+padding: 5px 10px;
+border-radius: 3px;
+}
+nav > ul > li > a {
+text-decoration: none;
+text-transform: capitalize;
+color: black;
+font-weight: 700;
+text-shadow: 0 0 2px black;
+}
+nav > ul > li:hover {
+background-color: #0081dc;
+cursor: pointer;
+transition: 0.2s;
+}
+nav > .logo {
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+nav > .logo::first-letter {
+    color: orange;
+    text-shadow: 0 0 2px black;
+}
+
+nav > ul > li > sup {
+    display: inline-flex;
+    height: 16px;
+    width: auto;
+    background-color: red;
+    border-radius: 7px;
+    justify-content: center;
+    color: white;
+}
+
+
+/* Home Styles */
+#homeContainer {
+width: 100%;
+/* border: 5px solid black; */
+position: relative;
+}
+#homeContainer > video {
+width: 100%;
+/* border: 2px solid black; */
+}
+#homeContainer > article {
+position: absolute;
+right: 120px;
+top: 150px;
+/* border: 2px solid black; */
+height: 50%;
+width: 30%;
+padding: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 40px;
+}
+#homeContainer > article > h1 {
+font-size: 70px;
+text-align: center;
+}
+#homeContainer > article > h1 > span {
+color: orange;
+}
+#homeContainer > article > button {
+padding: 10px 30px;
+font-size: larger;
+font-weight: 700;
+cursor: pointer;
+background-color: #0081dc;
+border: 1px solid #0081dc;
+color: white;
+border-radius: 5px;
+border: none;
+box-shadow: 0 0 3px gainsboro;
+}
+#homeContainer > article > button:hover {
+border: 1px solid #0081dc;
+color: #0081dc;
+background-color: whitesmoke;
+}
+
+/* PRODUCTS CONTAINER */
+#productsContainer {
+    padding: 20px;
+}
+#productsContainer > h1 {
+    padding: 50px;
+}
+
+#productsContainer > #productsWrapper {
+    min-height: calc(100vh - 70px);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    gap: 30px;
+}
+
+#productsContainer > #productsWrapper > .productCard {
+    height: 300px;
+    width: 250px;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    box-shadow: 0 0 5px gainsboro;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#productsContainer > #productsWrapper > .productCard img{
+    height: 50%;
+    width: 60%;
+}
+
+#productsContainer > #productsWrapper > .productCard > h3 {
+    text-align: center;
+    font-size: 16px;
+}
+  
+#productsContainer > #productsWrapper > .productCard > button {
+    padding: 5px 30px;
+    background-color: #0081dc;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+#productsContainer > #productsWrapper > .productCard > button:hover {
+    background-color: white;
+    color: #0081dc;
+    border: 1px solid #0081dc;
+    transition: 0.2s;
+}
+  
+#productsContainer > #productsWrapper > h2 {
+    position: absolute;
+    font-size: 60px;
+}
+  
+
+/* CART CONTAINER */
+#cartContainer {
+    width: 100%;
+    min-height: 30vh;
+    /* border: 2px solid red; */
+    padding: 20px;
+}
+
+#cartContainer > h1 {
+    padding: 50px;
+}
+
+#cartContainer > #cart {
+    width: 100%;
+    padding: 20px;
+    /* border: 2px solid black; */
+}
+
+#cartContainer > #cart > .cartCard {
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    box-shadow: 0 0 5px gainsboro;
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+    display: grid;
+    grid-template-columns: 2fr 5fr 1fr 1fr 1fr;
+    place-items: center;
+    padding: 20px;
+    margin: 10px 0px;
+}
+
+#cartContainer > #cart > .cartCard > img {
+    height: 100px;
+    width: 100px;
+}
+
+#cartContainer > #cart > .cartCard > h3 {
+    width: 50%;
+}
+
+#cartContainer > #cart > .cartCard > button {
+    padding: 5px 10px;
+    text-transform: capitalize;
+    border: 1px solid gainsboro;
+    background-color: #0081dc;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#cartContainer > #cart > .cartCard > button:hover {
+    border: 1px solid red;
+    color: red;
+    background-color: #fff;
+    transition: 0.2s;
+}
+
+
+
+/* Cart Total Section */
+#cartContainer > #cart > .cartTotal {
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    box-shadow: 0 0 5px gainsboro;
+    display: grid;
+    grid-template-columns: 7fr 1fr 1fr 1fr;
+    justify-items: center;
+    padding: 20px;
+    margin: 10px 0px;
+}
